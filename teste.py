@@ -1,4 +1,8 @@
 from py_football_data.leagues.Brasil import Brasil
 
 b = Brasil()
-print(b.request_page())
+s = b.leaderboard()
+
+for t in s.teams:
+    print(t)
+# print(s)

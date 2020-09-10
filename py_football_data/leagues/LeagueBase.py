@@ -1,10 +1,6 @@
-import requests
-from requests.adapters import Response
 from bs4 import BeautifulSoup
 
 from ..utils.api import Api
-
-from typing import Dict
 
 
 class LeagueBase:
