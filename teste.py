@@ -1,8 +1,8 @@
-from py_football_data.leagues.LeagueBase import LeagueBase
+from PySoccer.leagues.LeagueBase import LeagueBase
 
 
 league = LeagueBase()
-test = league.leaderboard('england_premier_league')
+test = league.leaderboard('brazil_serie_a')
 
 for t in test.teams:
     print(t)

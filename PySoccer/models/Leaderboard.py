@@ -1,5 +1,5 @@
 from typing import List
-from py_football_data.models.TeamOnLeaderboard import TeamOnLeaderboard
+from .TeamOnLeaderboard import TeamOnLeaderboard
 
 
 class Leaderboard:

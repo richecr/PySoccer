@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "py-footaball-data"
+name = "pysoccer"
 version = "0.1.0"
 description = "Library to access data from the main leagues in the world of world football."
 authors = ["Rich <richelton14@gmail.com>"]
@@ -7,11 +7,11 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-requests = "beautifulsoup4"
+requests = "^2.24.0"
 beautifulsoup4 = "^4.9.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.0.1"
+pytest = "^6.0.2"
 flake8 = "^3.8.3"
 autopep8 = "^1.5.4"
 
