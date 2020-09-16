@@ -2,21 +2,23 @@ from typing import List
 from bs4.element import Tag
 from bs4 import BeautifulSoup
 
+from ..constants.UrlsLeagues import urls
 from ..models.Leaderboard import Leaderboard
 from ..models.TeamOnLeaderboard import TeamOnLeaderboard
 from ..utils.api import Api
 
 
 class LeagueBase:
-    def __init__(self, url: str):
+    def __init__(self):
         self.api = Api()
-        self.url = url
+        self.url = ""
 
     def request_page(self) -> BeautifulSoup:
         page = self.api.get(self.url)
         return BeautifulSoup(page.text, "html.parser")
 
-    def leaderboard(self, ano: str = "2020"):
+    def leaderboard(self, championship: str, year: str = "2020"):
+        self.url = urls.get_url(championship, year)
         soup = self.request_page()
         div: List[Tag] = soup.find_all("div", {"class": "responsive-table"})
         table = div[0]

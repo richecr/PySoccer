@@ -1,15 +1,8 @@
-from py_football_data.leagues.Spain import Spain
-from py_football_data.leagues.Brasil import Brasil
+from py_football_data.leagues.LeagueBase import LeagueBase
 
-# b = Brasil()
-# s = b.leaderboard()
 
-# for t in s.teams:
-#     print(t)
+league = LeagueBase()
+test = league.leaderboard('england_premier_league')
 
-spain = Spain()
-s = spain.leaderboard()
-
-for t in s.teams:
+for t in test.teams:
     print(t)
-# print(s)
