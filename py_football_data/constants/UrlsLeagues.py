@@ -1,4 +1,3 @@
-from types import FunctionType
 from typing import Dict, Callable
 
 
