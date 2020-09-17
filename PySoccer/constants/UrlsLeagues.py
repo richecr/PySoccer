@@ -8,7 +8,8 @@ class UrlsLeagues:
         self.urls: Dict[str, Callable[[str], str]] = {
             "brazil_serie_a": self.get_url_leaderboard_brazil_serie_a,
             "spain_laliga_a": self.get_url_leaderboard_spain,
-            "england_premier_league": self.get_url_leaderboard_england
+            "england_premier_league": self.get_url_leaderboard_england,
+            "italy_serie_a": self.get_url_leaderboard_italy
         }
 
     def get_url(self, championship: str, year: str = "2020"):
@@ -42,6 +43,18 @@ class UrlsLeagues:
             .format(
                 self.url_main, year
             )
+
+    def get_url_italy_serie_a(self):
+        return "{0}/serie-a/startseite/wettbewerb/IT1".format(
+            self.url_main
+        )
+
+    def get_url_leaderboard_italy(self, year: str):
+        return "{0}/serie-a/tabelle/wettbewerb/IT1/saison_id/{1}"\
+            .format(
+                self.url_main, year
+            )
+
 
 
 urls = UrlsLeagues()
