@@ -2,7 +2,7 @@
 name = "pysoccer"
 version = "0.1.0"
 description = "Library to access data from the main leagues in the world of world football."
-authors = ["Rich <richelton14@gmail.com>", "Lucas la0359813@gmail.com"]
+authors = ["Rich <richelton14@gmail.com>", "Lucas <la0359813@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
