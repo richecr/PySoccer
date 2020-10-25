@@ -11,7 +11,8 @@ class UrlsLeagues:
             "england_premier_league": self.get_url_leaderboard_england,
             "italy_serie_a": self.get_url_leaderboard_italy,
             "portugal_nos_league": self.get_url_leaderboard_portugal,
-            "germany_bundesliga": self.get_url_leaderboard_germany
+            "germany_bundesliga": self.get_url_leaderboard_germany,
+            "france_ligue_one": self.get_url_leaderboard_france
         }
 
     def get_url(self, championship: str, year: str = "2020"):
@@ -75,6 +76,17 @@ class UrlsLeagues:
 
     def get_url_leaderboard_germany(self, year: str):
          return "{0}/1-bundesliga/tabelle/wettbewerb/L1/saison_id/{1}"\
+            .format(
+                self.url_main, year
+            )
+
+    def get_url_france_ligue_one(self):
+        return "{0}/ligue-1/startseite/wettbewerb/FR1".format(
+            self.url_main
+        )
+
+    def get_url_leaderboard_france(self, year: str):
+         return "{0}/ligue-1/tabelle/wettbewerb/FR1/saison_id/{1}"\
             .format(
                 self.url_main, year
             )
