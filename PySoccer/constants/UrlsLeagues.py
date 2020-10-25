@@ -13,7 +13,7 @@ class UrlsLeagues:
             "portugal_nos_league": self.get_url_leaderboard_portugal,
             "germany_bundesliga": self.get_url_leaderboard_germany,
             "france_ligue_one": self.get_url_leaderboard_france,
-            "argentine_superliga": self.get_url_leaderboard_italy,
+            "argentine_superliga": self.get_url_argentine_superliga,
         }
 
     def get_url(self, championship: str, year: str = "2020"):
