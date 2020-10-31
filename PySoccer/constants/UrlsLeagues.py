@@ -14,6 +14,7 @@ class UrlsLeagues:
             "germany_bundesliga": self.get_url_leaderboard_germany,
             "france_ligue_one": self.get_url_leaderboard_france,
             "argentine_superliga": self.get_url_leaderboard_argentine,
+            "netherlands_eredivisie": self.get_url_leaderboard_netherlands,
         }
 
     def get_url(self, championship: str, year: str = "2020"):
@@ -99,6 +100,17 @@ class UrlsLeagues:
 
     def get_url_leaderboard_argentine(self, year: str):
          return "{0}/primera-division/tabelle/wettbewerb/AR1N/saison_id/{1}"\
+            .format(
+                self.url_main, year
+            )
+
+    def get_url_netherlands_eredivisie(self):
+        return "{0}/eredivisie/startseite/wettbewerb/NL1".format(
+            self.url_main
+        )
+
+    def get_url_leaderboard_netherlands(self, year: str):
+         return "{0}/eredivisie/tabelle/wettbewerb/NL1/saison_id/{1}"\
             .format(
                 self.url_main, year
             )
